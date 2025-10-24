@@ -6,17 +6,7 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = "__all__"
     
    
-class ProductSerializer(serializers.ModelSerializer):
-    # category = CategorySerializer()  # nested representation (full category te ja ase sob dekhaibo)
-    # category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())  # sudhu primary key dekhaibo
-    # category = serializers.StringRelatedField() # sudhu category name dekhaibo
-    # category_id = serializers.PrimaryKeyRelatedField(
-    #     queryset=Category.objects.all(), write_only=True
-    # )
-  
-
-    # Optional: keep read-only nested data for GET
-    # category  = CategorySerializer()
+class ProductSerializer(serializers.ModelSerializer):   
     class Meta:
         model = Product
         fields = "__all__"
